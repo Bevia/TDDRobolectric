@@ -1,6 +1,10 @@
 # TDDRobolectric
 Android - TDD Robolectric
 
+testing:
+startActivity &
+startActivityForResult
+
         apply plugin: 'com.android.application'
         
         android {
