@@ -122,6 +122,13 @@ public class ExampleUnitTest {
         System.out.println("@Test - Start LoginActivity");
     }
 
+    /**
+     *
+     * TDD testing for startActivityForResult on MainActivity - Response from OnActivityResultNameActivity
+     * @throws Exception
+     * 
+     */
+
     // Run test: startActivityForResult from MainActivity to OnActivityResultNameActivity and back!!!
     @Test
     public void shouldFillNameViewFromChooserResponse() throws Exception {
