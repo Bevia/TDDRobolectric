@@ -108,6 +108,12 @@ public class TDDRobolectricUnitTest {
         Button button = (Button) mainActivity.findViewById(R.id.login);
         button.performClick();
 
+        /**
+         * Robolectric has an important concept called shadows. Shadows are classes that modify
+         * or extend the behavior of classes in the Android SDK.
+         * Ref: http://robolectric.org/extending/
+         */
+
         Intent intent = Shadows.shadowOf(mainActivity).peekNextStartedActivity();
         assertEquals(WelcomeActivity.class.getCanonicalName(), intent.getComponent().getClassName());
 
