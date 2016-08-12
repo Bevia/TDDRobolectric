@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
        final View button1 = findViewById(R.id.login);
        final View button2 = findViewById(R.id.forresult);
+       final View button3 = findViewById(R.id.fragment);
 
        nameView = (TextView)findViewById(R.id.nameView);
 
@@ -34,6 +35,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 startActivityForResult(
                         new Intent(MainActivity.this, OnActivityResultNameActivity.class), NAME_RESPONSE);
+            }
+        });
+
+        button3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivityForResult(
+                        new Intent(MainActivity.this, FragmentActivity.class), NAME_RESPONSE);
             }
         });
     }

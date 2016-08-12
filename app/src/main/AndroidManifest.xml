@@ -15,9 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".LoginActivity" ></activity>
+        <activity android:name=".WelcomeActivity" ></activity>
         <activity android:name=".OnActivityResultNameActivity"></activity>
+        <activity android:name=".FragmentActivity" ></activity>
     </application>
 
 </manifest>

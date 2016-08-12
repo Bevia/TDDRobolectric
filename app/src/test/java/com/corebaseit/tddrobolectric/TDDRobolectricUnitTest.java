@@ -45,6 +45,7 @@ public class TDDRobolectricUnitTest {
     private WelcomeActivity welcomeActivity;
     private LoginActivity loginActivity;
     private OnActivityResultNameActivity onActivityResultNameActivity;
+    private FragmentActivity fragmentActivity;
 
     // Run once, e.g. Database connection, connection pool
     @BeforeClass
@@ -75,10 +76,15 @@ public class TDDRobolectricUnitTest {
                 .resume()
                 .get();
 
+        fragmentActivity = Robolectric.buildActivity(FragmentActivity.class)
+                .create()
+                .resume()
+                .get();
+
     }
 
     @Test
-    public void seMainActivityshouldNotBeNull() throws Exception {
+    public void setMainActivityshouldNotBeNull() throws Exception {
         assertNotNull(mainActivity);
         System.out.println("@Test - mainActivity notNull");
     }
@@ -101,6 +107,11 @@ public class TDDRobolectricUnitTest {
         System.out.println("@Test - onActivityResultNameActivity notNull");
     }
 
+    @Test
+    public void setFragmentActivityshouldNotBeNull() throws Exception {
+        assertNotNull(fragmentActivity);
+        System.out.println("@Test - fragmentActivity notNull");
+    }
 
     // Run test:  startActivity from MainActivity to WelcomeActivity!!
     @Test

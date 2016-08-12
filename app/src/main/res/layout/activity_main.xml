@@ -26,7 +26,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Launch LOGIN"
         android:id="@+id/login"
         android:layout_below="@+id/results"
         android:layout_alignParentStart="true"
@@ -36,11 +36,22 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
+        android:text="Launch WELCOME"
         android:id="@+id/forresult"
         android:layout_below="@+id/login"
         android:layout_alignParentStart="true"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="111dp" />
+        android:layout_marginTop="40dp" />
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Launch Fragment"
+        android:id="@+id/fragment"
+        android:layout_below="@+id/forresult"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="40dp" />
 
 </RelativeLayout>
