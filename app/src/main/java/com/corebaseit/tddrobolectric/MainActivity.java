@@ -1,6 +1,8 @@
 package com.corebaseit.tddrobolectric;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,10 +13,16 @@ public class MainActivity extends AppCompatActivity {
     private static final int NAME_RESPONSE = 1;
     TextView nameView;
 
+    private static SharedPreferences prefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        if (prefs == null) {
+            prefs = this.getApplicationContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        }
 
        final View button1 = findViewById(R.id.login);
        final View button2 = findViewById(R.id.forresult);
@@ -61,5 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 nameView.setText("No name given.");
             }
         }
+    }
+
+    public String getSharedPrefValue(final String key) {
+        return prefs.getString(key, null);
     }
 }
