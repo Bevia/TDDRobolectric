@@ -74,4 +74,14 @@ public class MainActivity extends AppCompatActivity {
     public String getSharedPrefValue(final String key) {
         return prefs.getString(key, null);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }
