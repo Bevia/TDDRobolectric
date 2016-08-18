@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.corebaseit.tddrobolectric"
-        minSdkVersion 21
+        minSdkVersion 19
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     //you need this for Robolectric:
     testCompile "org.robolectric:robolectric:3.1.2"
+    testCompile 'org.assertj:assertj-core:1.7.1' //needed for assertions
     testCompile "org.robolectric:shadows-support-v4:3.0" //to test Fragments!
     /*testCompile "org.robolectric:robolectric:3.1-SNAPSHOT" */ //so that you can target API 23
     //you need need this for assertions:

@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity {
             prefs = this.getApplicationContext().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         }
 
-       final View button1 = findViewById(R.id.login);
-       final View button2 = findViewById(R.id.forresult);
+       final View button1 = findViewById(R.id.welcome);
+       final View button2 = findViewById(R.id.onactivityforresult);
        final View button3 = findViewById(R.id.fragment);
 
        nameView = (TextView)findViewById(R.id.nameView);

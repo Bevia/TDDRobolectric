@@ -2,6 +2,7 @@ package com.corebaseit.tddrobolectric;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.widget.Button;
 
 import org.junit.AfterClass;
@@ -37,9 +38,10 @@ import static junit.framework.Assert.assertNotNull;
  */
 
 @RunWith(RobolectricTestRunner.class)
-@Config(constants = BuildConfig.class, sdk = 22)
+@Config(constants = BuildConfig.class, sdk = Build.VERSION_CODES.LOLLIPOP)
+/*@Config(constants = BuildConfig.class, sdk = 22)*/
 
-public class TDDRobolectricUnitTest {
+public class ClassesInitializationUnitTest {
 
     private MainActivity mainActivity;
     private WelcomeActivity welcomeActivity;
@@ -116,7 +118,7 @@ public class TDDRobolectricUnitTest {
     // Run test:  startActivity from MainActivity to WelcomeActivity!!
     @Test
     public void buttonClickShouldStartWelcomeActivity() throws Exception {
-        Button button = (Button) mainActivity.findViewById(R.id.login);
+        Button button = (Button) mainActivity.findViewById(R.id.welcome);
         button.performClick();
 
         /**

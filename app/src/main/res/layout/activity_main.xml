@@ -26,8 +26,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Launch LOGIN"
-        android:id="@+id/login"
+        android:text="Launch Welcome Activity"
+        android:id="@+id/welcome"
         android:layout_below="@+id/results"
         android:layout_alignParentStart="true"
         android:layout_marginStart="38dp"
@@ -36,9 +36,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Launch WELCOME"
-        android:id="@+id/forresult"
-        android:layout_below="@+id/login"
+        android:text="Launch\nOnActivityResultNameActivity"
+        android:id="@+id/onactivityforresult"
+        android:layout_below="@+id/welcome"
         android:layout_alignParentStart="true"
         android:layout_marginStart="38dp"
         android:layout_marginTop="40dp" />
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:text="Launch Fragment"
         android:id="@+id/fragment"
-        android:layout_below="@+id/forresult"
+        android:layout_below="@+id/onactivityforresult"
         android:layout_alignParentStart="true"
         android:layout_marginStart="38dp"
         android:layout_marginTop="40dp" />
